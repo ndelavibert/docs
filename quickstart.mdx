@@ -1,80 +1,86 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Create your account, connect Neto, and prepare your first Synckony activation."
 ---
 
-## Get started in three steps
+## Get started with Synckony
 
-Get your documentation site running locally and make your first customization.
+Use this guide for the first merchant onboarding pass.
 
-### Step 1: Set up your local environment
+### Step 1: Create your account
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  <Accordion title="Create your Synckony workspace">
+    1. Open the [merchant sign-up page](https://app.synckony.com.au/merchant/register).
+    2. Register with the email address that should own the merchant workspace.
+    3. Verify your email and sign in to Synckony.
+    4. Complete the basic workspace setup so you can start connecting stores.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+  <Accordion title="Keep your access details ready">
+    Before you connect your first store, have the following available:
+
+    1. Your Neto store URL.
+    2. Your API key and any required access credentials.
+    3. The internal owner for the rollout so alerts and follow-up actions have a clear contact.
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+### Step 2: Connect your Neto store
 
 <AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Accordion title="Add your store connection">
+    1. Open the Synckony merchant dashboard after signing in.
+    2. Enter the store URL and API credentials for the Neto store you want to activate.
+    3. Let Synckony validate connectivity and scope the resources it can access.
+    4. Save the connection only after the validation step succeeds.
+  </Accordion>
+  <Accordion title="Confirm the baseline setup">
+    Once the connection is accepted, Synckony can prepare the baseline state it needs before routing live changes downstream.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
+    <Tip>Start with one store and one downstream use case before expanding to additional apps or merchant accounts.</Tip>
   </Accordion>
 </AccordionGroup>
 
-### Step 3: Go live
+### Step 3: Choose what to activate
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<AccordionGroup>
+  <Accordion title="Pick the first workflow">
+    Common starting points include:
+
+    - marketing and audience sync
+    - support and ticketing triggers
+    - search and merchandising data flows
+    - analytics or BI feeds
+  </Accordion>
+  <Accordion title="Go live carefully">
+    1. Confirm the destination app or webhook endpoint.
+    2. Watch the first sync cycle and verify the payload shape end to end.
+    3. Expand to more destinations only after the first flow is stable.
+  </Accordion>
+</AccordionGroup>
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
+After the first store is active, continue with the operational rollout:
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="Create another merchant account" href="/create-account">
+  Use the account setup guide when onboarding another merchant owner or operator.
 </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
+<Card title="Browse integrations" href="https://synckony.com.au/integrations">
+  Review the app categories Synckony is prioritizing next.
 </Card>
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
+<Card title="Review pricing" href="https://synckony.com.au/pricing">
+  Understand plan structure, credits, and rollout economics.
 </Card>
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
+<Card title="Talk to Synckony" href="mailto:hello@synckony.com.au">
+  Reach out if you want help sequencing the first implementation.
 </Card>
-
 </CardGroup>
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  If you are still evaluating fit, start on the [main Synckony site](https://synckony.com.au) and then return here once you are ready to activate a store.
 </Note>
