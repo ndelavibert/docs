@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Synckony Docs",
   "colors": {
-    "primary": "#255376",
-    "light": "#53AC9E",
-    "dark": "#123246"
+    "primary": "#234B73",
+    "light": "#55AFA0",
+    "dark": "#17324D"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -42,8 +42,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [
