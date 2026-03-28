@@ -20,6 +20,12 @@
               "create-account",
               "quickstart"
             ]
+          },
+          {
+            "group": "Playbooks",
+            "pages": [
+              "neto-playbook"
+            ]
           }
         ]
       }

@@ -1,0 +1,209 @@
+---
+title: "Neto managed integration playbook"
+description: "Choose the right managed integration strategy for Neto merchants across marketing, loyalty, reviews, support, post-purchase, and subscriptions."
+---
+
+This playbook summarizes the strongest Neto-side strategies for Synckony's highest-priority managed integrations, the merchant outcomes they unlock, and the platform constraints that shape each implementation.
+
+The guidance below is based on official provider documentation for Klaviyo, LoyaltyLion, Smile.io, Yotpo, AfterShip, Gorgias, Appstle, and Maropost Commerce Cloud add-ons.
+
+## How to use this playbook
+
+Use this page when you need to decide which integration is the best fit for a merchant's first rollout.
+
+- Start with the merchant's primary goal.
+- Match that goal to the integration profile below.
+- Confirm platform constraints before promising implementation scope.
+- Launch one high-value workflow first, then expand after the first sync path is stable.
+
+## Positioning summary
+
+<CardGroup cols={2}>
+  <Card title="Lifecycle marketing depth">
+    Choose **Klaviyo** when the merchant wants strong segmentation, event-driven flows, and catalog-aware retention campaigns.
+  </Card>
+  <Card title="Enterprise loyalty depth">
+    Choose **LoyaltyLion** when the merchant needs richer VIP logic, revenue-based tiers, and stronger lifecycle loyalty operations.
+  </Card>
+  <Card title="Simpler SMB loyalty">
+    Choose **Smile.io** when the merchant needs a lighter-weight points and referrals launch with lower setup complexity.
+  </Card>
+  <Card title="Reviews plus retention surface">
+    Choose **Yotpo** when the merchant wants reviews first with room to grow into broader retention programs.
+  </Card>
+  <Card title="Post-purchase tracking and returns">
+    Choose **AfterShip** when the merchant wants shipment visibility, branded tracking, and returns orchestration.
+  </Card>
+  <Card title="CX automation and ticketing">
+    Choose **Gorgias** when the merchant needs support workflows tied to order, RMA, or exception events.
+  </Card>
+  <Card title="Subscription contract operations">
+    Choose **Appstle** only when the merchant already exposes Appstle contract metadata in Neto and needs an operational bridge.
+  </Card>
+</CardGroup>
+
+## Klaviyo
+
+### What Synckony should do
+
+- Upsert Neto customers into Klaviyo profiles.
+- Subscribe customers to a configured Klaviyo list when Neto explicitly marks them as marketing opted in.
+- Send Neto order activity as Klaviyo events for segmentation and flow triggers.
+- Push Neto product changes into Klaviyo catalog sync so browse, back-in-stock, and recommendation flows stay usable.
+
+### Best merchant strategies
+
+- Welcome and nurture flows from Neto signups and first-order milestones.
+- VIP, lapsed buyer, and replenishment segments using Neto order cadence and total value.
+- Back-in-stock, browse abandonment, and product-drop campaigns once the catalog feed is stable.
+- Cross-sell flows using synced category, vendor, or collection data.
+
+### Why merchants choose it
+
+- Better lifecycle targeting than a basic newsletter connector.
+- Lower list hygiene risk because consent stays anchored to Neto's customer record.
+- Faster flow setup because orders, profiles, and catalog data live in one place.
+
+## LoyaltyLion
+
+### What Synckony should do
+
+- Create or update customer records in LoyaltyLion from Neto customer data.
+- Record signup activity when a customer is first created.
+- Push Neto order state into LoyaltyLion so points, VIP tiers, and purchase-driven rewards stay accurate.
+
+### Best merchant strategies
+
+- Reward account creation and first purchase without manual exports.
+- Drive VIP tiers from Neto revenue and order frequency.
+- Trigger winback rewards for high-value customers whose purchase cadence drops.
+- Give support teams visibility into loyalty status using the same customer identity Synckony syncs elsewhere.
+
+### Why merchants choose it
+
+- Cleaner loyalty accrual than spreadsheet or batch-import processes.
+- Better tier accuracy for B2C and wholesale hybrid merchants.
+- Easier loyalty reporting because order truth still comes from Neto.
+
+## Smile.io
+
+### What Synckony should do
+
+- Forward Neto signup and order activity into Smile.io custom activities.
+- Expose a clear compatibility guardrail because Smile is most comfortable on Shopify and BigCommerce-style storefront surfaces.
+- Let merchants selectively enable member sync instead of assuming every Neto store is a clean fit.
+
+### Best merchant strategies
+
+- Reward account creation, order milestones, and campaign-specific actions.
+- Run simpler points programs for merchants who need a fast launch and do not need LoyaltyLion's depth.
+- Use Smile as a lightweight retention layer when the merchant mainly wants points and referrals.
+
+### Why merchants choose it
+
+- Fast to explain and fast to onboard for SMB merchants.
+- Good fit for straightforward earn-and-redeem programs.
+- Lower setup complexity when the merchant only needs a few mapped activities.
+
+<Warning>
+  Smile.io is the most platform-sensitive option in this set. Confirm storefront compatibility before selling it as a managed Neto integration.
+</Warning>
+
+## Yotpo
+
+### What Synckony should do
+
+- Push Neto fulfilled orders into Yotpo purchase imports for review requests and UGC programs.
+- Sync Neto product metadata so review requests, syndication, and on-site review widgets reference current products.
+- Preserve product URL and image fields whenever Neto provides them.
+
+### Best merchant strategies
+
+- Automate post-purchase review requests tied to Neto fulfillment.
+- Support richer UGC programs because product images and URLs stay synced.
+- Start with Yotpo Reviews, then expand into loyalty, SMS, or subscriptions if the merchant wants a broader retention stack.
+- Pair Yotpo with Klaviyo or Gorgias for review-based segmentation and support workflows.
+
+### Why merchants choose it
+
+- Strong review and social-proof workflows.
+- Better review-request accuracy than manual CSV uploads.
+- Clear path from review collection into broader retention programs.
+
+## AfterShip
+
+### What Synckony should do
+
+- Create tracking records from Neto shipment and tracking updates.
+- Support multiple tracking numbers per order.
+- Create return records from Neto RMA events when merchants want returns orchestration in AfterShip.
+
+### Best merchant strategies
+
+- Branded tracking pages and proactive delivery notifications.
+- Support deflection by giving agents and customers a single delivery-status source.
+- Return visibility using Neto RMA events as the operational trigger.
+- Trigger downstream marketing and support automations from delivery milestones.
+
+### Why merchants choose it
+
+- Lower WISMO volume.
+- Better post-purchase trust and conversion.
+- Cleaner handoff between warehouse, CX, and returns teams.
+
+## Gorgias
+
+### What Synckony should do
+
+- Upsert Neto customers into Gorgias customer records.
+- Create support tickets from Neto order or RMA events when merchants explicitly enable those flows.
+- Tag tickets consistently so CX teams can route Synckony-created issues quickly.
+
+### Best merchant strategies
+
+- Create RMA-originated tickets automatically so returns never disappear into inbox gaps.
+- Create order exception tickets for high-touch merchants while leaving normal order updates ticket-free.
+- Use synced customer identity to unify support context across order, loyalty, tracking, and marketing tools.
+
+### Why merchants choose it
+
+- Faster agent resolution because customer and order context is pre-attached.
+- Stronger operational discipline around returns and exception handling.
+- Easier triage for multi-brand or high-volume support teams.
+
+## Appstle
+
+### What Synckony should do
+
+- Treat Appstle as a subscription-contract operations bridge, not a generic marketing sync.
+- Update Appstle contract billing dates, intervals, and order notes when Neto payloads already include the corresponding Appstle contract metadata.
+- Keep the compatibility note explicit because Appstle's public APIs are Shopify-subscription centric.
+
+### Best merchant strategies
+
+- Use Neto as the operational back office while Appstle remains the subscription engine.
+- Mirror Appstle contract IDs into Neto custom fields so subscription servicing can be automated from Neto-driven events.
+- Push billing-date, cadence, and note changes from operational workflows instead of forcing staff into multiple admin tools.
+
+### Why merchants choose it
+
+- Better subscription operations control for merchants already running Appstle elsewhere in the stack.
+- Reduced agent swivel-chair work for subscription servicing.
+- Useful bridge for merchants migrating workflows or running hybrid platform estates.
+
+<Warning>
+  Appstle is not a clean plug-and-play Neto add-on in the same way Klaviyo or AfterShip can be. Position it only when Appstle contract identifiers are already mapped into Neto.
+</Warning>
+
+## Recommended rollout order
+
+1. Pick one merchant goal.
+2. Validate that the downstream platform fits the merchant's operational and storefront constraints.
+3. Start with one live workflow, such as lifecycle marketing, tracking, or CX escalation.
+4. Verify the first sync path end to end before expanding to other apps or automation layers.
+
+## Need help sequencing a rollout?
+
+<Note>
+  If you want help choosing the right first managed integration for a merchant, email [hello@synckony.com.au](mailto:hello@synckony.com.au) or start from the main [integrations overview](https://synckony.com.au/integrations).
+</Note>
