@@ -9,27 +9,6 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Getting started",
-        "groups": [
-          {
-            "group": "Onboarding",
-            "pages": [
-              "index",
-              "create-account",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "Playbooks",
-            "pages": [
-              "neto-playbook"
-            ]
-          }
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
@@ -45,7 +24,29 @@
           "href": "https://synckony.com.au/pricing"
         }
       ]
-    }
+    },
+    "tabs": [
+      {
+        "tab": "Getting started",
+        "groups": [
+          {
+            "group": "Onboarding",
+            "pages": [
+              "index",
+              "create-account",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Playbooks",
+            "hidden": true,
+            "pages": [
+              "neto-playbook"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.png",
